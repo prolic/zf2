@@ -163,7 +163,7 @@ class Client implements Dispatchable
      *
      * @param  Config|array $config
      * @return Client
-     * @throws Client\Exception
+     * @throws Client\Exception\InvalidArgumentException
      */
     public function setConfig($config = array())
     {
@@ -614,7 +614,7 @@ class Client implements Dispatchable
         }
 
         if (false === ($fp = @fopen($this->streamName, "w+b"))) {
-            if ($this->adapter instanceof Client\Adapter) {
+            if ($this->adapter instanceof Client\Adapter\AdapterInterface) {
                 $this->adapter->close();
             }
             throw new Exception\RuntimeException("Could not open temp file {$this->streamName}");
@@ -936,7 +936,7 @@ class Client implements Dispatchable
      * @param  string $ctype Content type to use (if $data is set and $ctype is
      *                null, will be application/octet-stream)
      * @return Client
-     * @throws Exception
+     * @throws Exception\RuntimeException
      */
     public function setFileUpload($filename, $formname, $data = null, $ctype = null)
     {
@@ -1093,7 +1093,7 @@ class Client implements Dispatchable
      * Prepare the request body (for PATCH, POST and PUT requests)
      *
      * @return string
-     * @throws \Zend\Http\Client\Exception
+     * @throws \Zend\Http\Client\Exception\RuntimeException
      */
     protected function prepareBody()
     {
@@ -1142,7 +1142,7 @@ class Client implements Dispatchable
                 // Encode body as application/x-www-form-urlencoded
                 $body = http_build_query($this->getRequest()->post()->toArray());
             } else {
-                throw new Exception\RuntimeException("Cannot handle content type '{$this->encType}' automatically");
+                throw new Client\Exception\RuntimeException("Cannot handle content type '{$this->encType}' automatically");
             }
         }
 
