@@ -101,7 +101,7 @@ class Search extends Client\RestClient
     /**
      * Performs a Twitter search query.
      *
-     * @throws Http\Client\Exception
+     * @throws Http\Client\Exception\ExceptionInterface
      * @return mixed
      */
     public function execute($query, array $params = array())

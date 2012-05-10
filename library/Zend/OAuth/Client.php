@@ -85,7 +85,7 @@ class Client extends \Zend\Http\Client
     /**
      * Return the current connection adapter
      *
-     * @return Zend\Http\Client\Adapter|string $adapter
+     * @return \Zend\Http\Client\Adapter\AdapterInterface|string $adapter
      */
     public function getAdapter()
     {
@@ -95,7 +95,7 @@ class Client extends \Zend\Http\Client
    /**
      * Load the connection adapter
      *
-     * @param Zend\Http\Client\Adapter $adapter
+     * @param \Zend\Http\Client\Adapter\AdapterInterface $adapter
      * @return void
      */
     public function setAdapter($adapter)
@@ -137,7 +137,7 @@ class Client extends \Zend\Http\Client
      * Prepare the request body (for POST and PUT requests)
      *
      * @return string
-     * @throws Zend\Http\Client\Exception
+     * @throws \Zend\Http\Client\Exception\RuntimeException
      */
     protected function _prepareBody()
     {
@@ -147,7 +147,7 @@ class Client extends \Zend\Http\Client
             return $this->raw_post_data;
         }
         else {
-            return parent::_prepareBody();
+            return parent::prepareBody();
         }
     }
 
