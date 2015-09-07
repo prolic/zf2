@@ -48,7 +48,7 @@
         "zendframework/zend-progressbar": "~2.5.0",
         "zendframework/zend-serializer": "~2.5.0",
         "zendframework/zend-server": "~2.5.0",
-        "zendframework/zend-servicemanager": "~2.6.0",
+        "zendframework/zend-servicemanager": "dev-internal_2.6",
         "zendframework/zend-session": "~2.5.0",
         "zendframework/zend-soap": "~2.5.0",
         "zendframework/zend-stdlib": "~2.5.0",
