@@ -40,7 +40,7 @@
         "zendframework/zend-memory": "~2.5.0",
         "zendframework/zend-mime": "~2.5.0",
         "zendframework/zend-modulemanager": "~2.5.0",
-        "zendframework/zend-mvc": "~2.5.0",
+        "zendframework/zend-mvc": "~2.6.0",
         "zendframework/zend-navigation": "~2.5.0",
         "zendframework/zend-paginator": "~2.5.0",
         "zendframework/zend-permissions-acl": "~2.5.0",
