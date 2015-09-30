@@ -27,7 +27,7 @@
         "zendframework/zend-feed": "~2.5.0",
         "zendframework/zend-file": "~2.5.0",
         "zendframework/zend-filter": "~2.5.0",
-        "zendframework/zend-form": "~2.5.0",
+        "zendframework/zend-form": "~2.6.0",
         "zendframework/zend-http": "~2.5.0",
         "zendframework/zend-i18n": "~2.5.0",
         "zendframework/zend-i18n-resources": "~2.5.0",
